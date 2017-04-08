@@ -25,6 +25,9 @@
     <Compile Include="httpmock.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="scenic.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Tourism.py" />
   </ItemGroup>
   <PropertyGroup>
