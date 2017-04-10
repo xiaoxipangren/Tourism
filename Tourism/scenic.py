@@ -22,14 +22,15 @@ class User(threading.Thread):
         destfile=open(self.name+'userpois.csv','wt',encoding='utf-8')
         writer = csv.DictWriter(destfile,dialect='excel',fieldnames=['uid','poi_href','poi_id','name','star','content','datetime','description','pics','tel','site','time','traffic','ticket','opentime','location','insides'])
         writer.writeheader()
-
-        while True:
-            if self.queue.empty():
-                break
-            uid = self.queue.get()
-            print(self.name+' '+uid)
-            getUsersThread(writer,uid)
-        return
+        try:
+            while True:
+                if self.queue.empty():
+                    break
+                uid = self.queue.get()
+                print(self.name+' '+uid)
+                getUsersThread(writer,uid)
+        finally:
+            destfile.close()
 
 def getUsersThreads():
     file=open('leftusers.txt','rt',encoding='utf-8')
