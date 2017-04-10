@@ -22,6 +22,9 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="handle.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="httpmock.py">
       <SubType>Code</SubType>
     </Compile>
@@ -29,6 +32,14 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Tourism.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="around.html" />
+    <Content Include="comment.html" />
+    <Content Include="data.html" />
+    <Content Include="review.html" />
+    <Content Include="scenic.xlsx" />
+    <Content Include="usercom.html" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

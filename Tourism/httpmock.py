@@ -21,9 +21,9 @@ def geneHeader():
 
     return headers
 
-def requestByGet(url,isJson=False,params=None):
+def requestByGet(url,isJson=False,data=None):
     header = geneHeader()
-    r = requests.get(url,headers=header,params=params)
+    r = requests.get(url,headers=header,params=data)
     if(isJson):
         return r.json()
     else:
